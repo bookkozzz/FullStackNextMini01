@@ -27,7 +27,7 @@ export async function encrypt(payload: Record<string, unknown>) {
 export async function decrypt(input: string): Promise<Record<string, unknown>> {
     const { payload } = await jwtVerify(input, key, {
         algorithms: ["HS256"],
-        clockTolerance: 60,
+        clockTolerance: 300,
     });
     return payload;
 }

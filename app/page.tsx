@@ -24,17 +24,15 @@ export default function Home() {
           />
         </div>
 
-        <p className="bg-blue-100 shadow-xl mt-8 p-6 rounded-lg border-2 border-blue-900 text-center text-lg text-gray-800">
-        ค้นหาข้อมูลพยากรณ์อากาศที่แม่นยำและอัพเดทล่าสุด เพื่อเตรียมตัวสำหรับทุกสภาพอากาศ ไม่ว่าฝนจะตกหรือแดดออก
+        <p className="bg-white shadow-2xl mt-8 p-8 rounded-3xl border-4 border-indigo-700 text-center text-lg text-gray-800 transform hover:scale-105 hover:rotate-2 hover:shadow-2xl transition-all duration-500 ease-in-out">
+          ค้นหาข้อมูลพยากรณ์อากาศที่แม่นยำและอัพเดทล่าสุด เพื่อเตรียมตัวสำหรับทุกสภาพอากาศ ไม่ว่าฝนจะตกหรือแดดออก
         </p>
 
         <div className="mt-8">
-          <p className="bg-blue-100 shadow-lg p-6 rounded-lg border-2 border-blue-900 text-center text-lg text-gray-800">
-          เริ่มต้นด้วยการเช็คสภาพอากาศในพื้นที่ของคุณหรือที่ใดก็ได้ เพื่อให้คุณพร้อมสำหรับวันใหม่!
+          <p className="bg-white shadow-2xl p-8 rounded-3xl border-4 border-yellow-700 text-center text-lg text-gray-800 transform hover:scale-105 hover:rotate-2 hover:shadow-2xl transition-all duration-500 ease-in-out">
+            เริ่มต้นด้วยการเช็คสภาพอากาศในพื้นที่ของคุณหรือที่ใดก็ได้ เพื่อให้คุณพร้อมสำหรับวันใหม่!
           </p>
         </div>
-
-      
       </div>
     </>
   );

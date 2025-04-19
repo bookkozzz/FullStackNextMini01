@@ -22,7 +22,7 @@ export default function Header() {
         fetchSession()
 
         // ตั้ง interval เพื่อเช็ค session ใหม่ทุกๆ 5 วินาที (สามารถปรับเวลาได้)
-        const intervalId = setInterval(fetchSession, 100)
+        const intervalId = setInterval(fetchSession, 1000)
 
         // เคลียร์ interval เมื่อ component ถูก unmount
         return () => clearInterval(intervalId)
