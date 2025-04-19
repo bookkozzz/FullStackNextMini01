@@ -13,10 +13,20 @@ export default function Header() {
             const session = await getSession()
             if (session && typeof session.role === "string") {
                 setRole(session.role)
+            } else {
+                setRole(null) // หากไม่มี session กำหนด role เป็น null
             }
         }
+
+        // เรียก fetchSession เมื่อโหลดหน้า
         fetchSession()
-    }, [])
+
+        // ตั้ง interval เพื่อเช็ค session ใหม่ทุกๆ 5 วินาที (สามารถปรับเวลาได้)
+        const intervalId = setInterval(fetchSession, 100)
+
+        // เคลียร์ interval เมื่อ component ถูก unmount
+        return () => clearInterval(intervalId)
+    }, []) // empty dependency array to run only once when the component mounts
 
     return (
         <header className="bg-blue-600 p-4 shadow-md">
@@ -26,8 +36,14 @@ export default function Header() {
                     <Link href="/" className="text-white hover:text-gray-300">Home</Link>
                     <Link href="/simple_db" className="text-white hover:text-gray-300">Check-Weather</Link>
                     <Link href="/simple_db/weather-crud" className="text-white hover:text-gray-300">Crud-Weather</Link>
-                    <Link href="/simple_db/login" className="text-white hover:text-gray-300">Login</Link>
-                    <Link href="/simple_db/register" className="text-white hover:text-gray-300">Register</Link>
+
+                    {/* แสดงเมนู Login และ Register เฉพาะเมื่อไม่มี session */}
+                    {!role && (
+                        <>
+                            <Link href="/simple_db/login" className="text-white hover:text-gray-300">Login</Link>
+                            <Link href="/simple_db/register" className="text-white hover:text-gray-300">Register</Link>
+                        </>
+                    )}
                 </div>
 
                 {/* Right side */}

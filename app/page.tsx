@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <>
       <div className="min-h-screen bg-gradient-to-r from-blue-400 to-purple-500 flex flex-col items-center justify-center">
-        <h1 className="text-4xl font-bold text-white mb-6">ยินดีต้องรับสู่ รู้ไว่ก่อนจะไม่เปียก</h1>
+        <h1 className="text-4xl font-bold text-white mb-6">ยินดีต้อนรับ รู้ไว่ไม่เปียก</h1>
 
         <div className="flex justify-center gap-8 mb-6">
           <Image
@@ -25,12 +25,12 @@ export default function Home() {
         </div>
 
         <p className="bg-blue-100 shadow-xl mt-8 p-6 rounded-lg border-2 border-blue-900 text-center text-lg text-gray-800">
-          Welcome to our platform where you can find amazing content and features. Join us now!
+        ค้นหาข้อมูลพยากรณ์อากาศที่แม่นยำและอัพเดทล่าสุด เพื่อเตรียมตัวสำหรับทุกสภาพอากาศ ไม่ว่าฝนจะตกหรือแดดออก
         </p>
 
         <div className="mt-8">
           <p className="bg-blue-100 shadow-lg p-6 rounded-lg border-2 border-blue-900 text-center text-lg text-gray-800">
-            Start your journey by signing in or creating a new account.
+          เริ่มต้นด้วยการเช็คสภาพอากาศในพื้นที่ของคุณหรือที่ใดก็ได้ เพื่อให้คุณพร้อมสำหรับวันใหม่!
           </p>
         </div>
 
