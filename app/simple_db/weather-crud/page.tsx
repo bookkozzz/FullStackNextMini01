@@ -76,7 +76,7 @@ export default function WeatherCrudPage() {
           <input
             type="text"
             name="city"
-            placeholder="City"
+            placeholder={formData.city === '' ? "City" : formData.city}
             value={formData.city}
             onChange={handleChange}
             className="p-2 border rounded"
@@ -84,7 +84,7 @@ export default function WeatherCrudPage() {
           <input
             type="text"
             name="description"
-            placeholder="Description"
+            placeholder={formData.description === '' ? "Description" : formData.description}
             value={formData.description}
             onChange={handleChange}
             className="p-2 border rounded"
@@ -92,24 +92,24 @@ export default function WeatherCrudPage() {
           <input
             type="number"
             name="temp"
-            placeholder="Temp °C"
-            value={formData.temp}
+            placeholder={formData.temp === 0 ? "Temp °C" : `${formData.temp} °C`}
+            value={formData.temp === 0 ? '' : formData.temp}
             onChange={handleChange}
             className="p-2 border rounded"
           />
           <input
             type="number"
             name="humidity"
-            placeholder="Humidity %"
-            value={formData.humidity}
+            placeholder={formData.humidity === 0 ? "Humidity %" : `${formData.humidity} %`}
+            value={formData.humidity === 0 ? '' : formData.humidity}
             onChange={handleChange}
             className="p-2 border rounded"
           />
           <input
             type="number"
             name="wind"
-            placeholder="Wind m/s"
-            value={formData.wind}
+            placeholder={formData.wind === 0 ? "Wind m/s" : `${formData.wind} m/s`}
+            value={formData.wind === 0 ? '' : formData.wind}
             onChange={handleChange}
             className="p-2 border rounded"
           />

@@ -46,8 +46,8 @@ export default function WeatherPage() {
       <div className="max-w-7xl mx-auto">
         {/* Header and Search */}
         <div className="bg-white/80 backdrop-blur-sm rounded-xl shadow-lg p-6 mb-6">
-          <h1 className="text-3xl font-bold text-center text-gray-800 mb-2">Weather Forecast</h1>
-          <p className="text-center text-gray-600 mb-6">Get current weather and forecasts for any city</p>
+          <h1 className="text-3xl font-bold text-center text-gray-800 mb-2">Weather Search</h1>
+          <p className="text-center text-gray-600 mb-6">สามารถค้นหาสภาพอากาศตาม "ประเทศ""จังหวัด"</p>
           
           <div className="flex flex-col md:flex-row gap-3 max-w-2xl mx-auto">
             <input
@@ -55,7 +55,7 @@ export default function WeatherPage() {
               type="text"
               value={city}
               onChange={(e) => setCity(e.target.value)}
-              placeholder="Enter city name"
+              placeholder="ใส่ชื่อที่ต้องการค้นหา"
               onKeyDown={(e) => e.key === 'Enter' && fetchWeather()}
             />
             <button

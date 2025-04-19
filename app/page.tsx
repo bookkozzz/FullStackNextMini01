@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <>
       <div className="min-h-screen bg-gradient-to-r from-blue-400 to-purple-500 flex flex-col items-center justify-center">
-        <h1 className="text-4xl font-bold text-white mb-6">ยินดีต้อนรับ รู้ไว้ไม่เปียก</h1>
+        <h1 className="text-4xl font-bold text-white mb-6">ยินดีต้อนรับสู่ รู้ไว้ไม่เปียก</h1>
 
         <div className="flex justify-center gap-8 mb-6">
           <Image
