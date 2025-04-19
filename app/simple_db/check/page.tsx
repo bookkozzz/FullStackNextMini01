@@ -13,7 +13,7 @@ export default async function CheckToken() {
     // เช็คและจัดการค่า session ที่ไม่สามารถเป็น null ได้
     if (!session) {
         return (
-            <div className="flex justify-center items-center h-screen bg-gray-100">
+            <div className="flex justify-center items-center h-screen bg-gradient-to-r from-blue-400 to-purple-500">
                 <div className="text-center p-6 bg-white shadow-lg rounded-lg">
                     <h2 className="text-xl text-red-500 font-semibold mb-4">No session found</h2>
                     <p className="text-gray-600">Please log in to access this page.</p>
